@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: white;
+}
+
+.navbar {
+    background-color: #d9d7d7;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 30px;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.nav-left {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.nav-right a.active {
+    background-color: #cbb1c9;
+    padding: 10px 20px;
+    border-radius: 0 0 20px 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    padding: 40px 30px;
+    margin-bottom: -120px;
+    margin-left: 500px;
+}
+
+.profile-pic {
+    width: 230px;
+    height: 230px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.title-text .name {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2em;
+    margin: 0;
+}
+
+.title-text .role {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.quote-box {
+    background-color: #caaec7;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 900px;
+    padding: 60px 40px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
