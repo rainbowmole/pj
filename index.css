@@ -1,21 +1,30 @@
+/* === GENERAL STYLES === */
 body {
     margin: 0;
     font-family: Georgia, serif;
     background-color: white;
 }
 
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 100px auto 0;
+}
+
+/* === NAVIGATION BAR === */
 .navbar {
     background-color: #d9d7d7;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 50px 30px;
+    padding: 20px 30px;
     align-items: center;
     font-size: 1.2em;
 }
 
 .nav-left {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 1.8em;
 }
 
 .nav-right a {
@@ -32,44 +41,108 @@ body {
     color: white;
 }
 
+/* === QUOTE BOX === */
+.quote-box {
+    position: relative; /* enables floating header inside */
+    background-color: #caaec7;
+    margin: 20px auto;
+    width: 100%;
+    padding: 100px 20px 40px; /* top padding allows space for floating header */
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+
+/* === FLOATING HEADER INSIDE QUOTE BOX === */
 .header-section {
+    position: absolute;
+    top: -80px; /* floats it above the quote box */
+    left: 30px;
     display: flex;
     align-items: center;
-    padding: 40px 30px;
-    margin-bottom: -120px;
-    margin-left: 500px;
+    gap: 20px;
+    z-index: 2;
+    padding: 0;
 }
 
 .profile-pic {
-    width: 230px;
-    height: 230px;
+    width: 170px;
+    height: 170px;
     background-color: #d9d9d9;
     border-radius: 50%;
-    margin-right: 30px;
+    flex-shrink: 0;
 }
 
 .title-text .name {
     font-family: 'Brush Script MT', cursive;
-    font-size: 2em;
+    font-size: 2.2em;
     margin: 0;
+    color: black;
 }
 
 .title-text .role {
     font-size: 1.2em;
     font-weight: normal;
     margin-top: 5px;
+    color: black;
+    text-align: left;
 }
 
-.quote-box {
-    background-color: #caaec7;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 900px;
-    padding: 60px 40px;
-    border-radius: 30px;
-    text-align: center;
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
+/* === RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+
+    .header-section {
+        flex-direction: column;
+        align-items: flex-start;
+        top: -40px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .quote-box {
+        font-size: 1.4em;
+        padding: 100px 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-left {
+        font-size: 1.5em;
+    }
+
+    .nav-right a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header-section {
+        left: 15px;
+    }
+
+    .quote-box {
+        font-size: 1.2em;
+    }
+
+    .title-text .name {
+        font-size: 1.5em;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
 }
